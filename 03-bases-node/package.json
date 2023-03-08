@@ -1,0 +1,19 @@
+{
+  "name": "03-bases-node",
+  "version": "1.0.0",
+  "description": "multiplicar tablas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "base3": "npm run --base 3"
+  },
+  "author": "Junior Obando",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
