@@ -2,12 +2,17 @@ require('colors');
 
 const { inquirerMenu, pause, readInput } = require('./helpers/inquirer');
 const Tasks = require('./models/tasks');
-const { saveDB } = require('./helpers/saveFile');
+const { saveDB, readDB } = require('./helpers/saveFile');
 
 const main = async () => {
-    console.log("hello wordd");
     let opt = '';
     const tasks = new Tasks();
+
+    const tasksDB = readDB();
+
+    if(tasksDB) {
+        tasks.loadTasksFromArray(tasksDB);
+    }
 
     do {
         opt = await inquirerMenu();
